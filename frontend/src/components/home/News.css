@@ -1,0 +1,82 @@
+/* News.css */
+
+.news-section {
+  padding-top: 2rem; /* Adjust padding as needed */
+}
+
+.news-title {
+  font-size: 1.5rem; /* Corresponds to text-3xl */
+  font-weight: 600; /* Corresponds to font-semibold */
+  margin-bottom: 0.5rem; /* Corresponds to mb-6 */
+}
+
+.mySwiper {
+  width: 100%;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-12 {
+  gap: 3rem; /* Adjust gap as needed */
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem; /* Adjust font size as needed */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* Adjust font size as needed */
+}
+
+.hover\:text-blue-500:hover {
+  color: #3b82f6; /* Change to your desired hover color */
+}
+
+.w-12 {
+  width: 3rem; /* Adjust width as needed */
+}
+
+.h-\[4px\] {
+  height: 4px; /* Adjust height as needed */
+}
+
+.bg-primary {
+  background-color: #3b82f6; /* Change to your primary color */
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem; /* Adjust margin as needed */
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.w-full {
+  width: 100%; /* Full width for images */
+}
+
+.object-cover {
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
