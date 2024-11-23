@@ -19,7 +19,7 @@ const BookCard = ({ book }) => {
     <div className="book-card">
       <div className="book-card-container">
         <div className="book-card-img">
-          <Link to={`/books/${book._id}`}>
+          <Link to={`/book/${book._id}`}>
             <img
               src={`${getImgUrl(book?.coverImage)}`}
               alt=""

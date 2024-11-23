@@ -1,0 +1,43 @@
+/* src/components/books/SingleBook.css */
+
+.single-book {
+    max-width: 32rem; /* Equivalent to max-w-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+    padding: 1.25rem; /* Equivalent to p-5 */
+}
+
+.single-book h1 {
+    font-size: 1.5rem; /* Equivalent to text-2xl */
+    font-weight: bold; /* Equivalent to font-bold */
+    margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+}
+
+.single-book img {
+    margin-bottom: 2rem; /* Equivalent to mb-8 */
+}
+
+.single-book p {
+    color: #4a5568; /* Equivalent to text-gray-700 */
+    margin-bottom: 1rem; /* General margin for paragraphs */
+}
+
+.single-book p strong {
+    font-weight: bold; /* Make strong text bold */
+}
+
+.single-book .btn-primary {
+    background-color: #FFCE1A;; /* Primary button color */
+    color: black; /* Text color */
+    padding: 0.75rem 1.5rem; /* Equivalent to px-6 */
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; /* Equivalent to gap-1 */
+    border: none;
+    border-radius: 0.375rem; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.single-book .btn-primary:hover {
+    background-color: #3b82f6;
+}
