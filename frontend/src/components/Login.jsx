@@ -1,21 +1,40 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import './Login.css'; // Import the CSS file
+import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
     const [message, setMessage] = useState("");
+    const {loginUser,signInWithGoogle} = useAuth();
+    const navigate = useNavigate()
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = async (data) => {
+        try {
+            await loginUser(data.email, data.password)
+            alert("User login successful")
+            navigate("/")
+        } catch (error) {
+            setMessage("Please Provide Valid Email and Password");
+            console.error(error);
+        }
+        
+    }
 
-    const handleGoogleSignin = () => {
-        window.location.href = "http://localhost:5000/api/auth/google";
+    const handleGoogleSignIn = async () => {
+        try {
+            await signInWithGoogle();
+            navigate("/");
+        } catch (error) {
+            alert("Google Sign In Failed");
+            console.error(error);
+        } 
     };
 
     return (
@@ -67,7 +86,7 @@ const Login = () => {
                 {/**GOOGLE SIGN IN BUTTON */}
                 <div className='google-signin'>
                     <button
-                        onClick={handleGoogleSignin}
+                        onClick={handleGoogleSignIn}
                         className='google-button'
                     >
                         <FaGoogle className='google-icon' />

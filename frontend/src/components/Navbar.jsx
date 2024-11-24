@@ -64,6 +64,8 @@ import './Navbar.css'; // Import the CSS file
 import avatarImg from "../assets/avatar.png"
 import {useState} from "react";
 import { useSelector } from 'react-redux';
+import { useAuth } from '../context/AuthContext';
+import { FaSignOutAlt } from "react-icons/fa"; // Import the logout icon
 
 
 const navigation = [
@@ -78,7 +80,11 @@ const Navbar = () => {
 
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const currentUser = false;
+
+  const {currentUser, logout} =  useAuth()
+  const handleLogOut = () => {
+    logout()
+  }
 
   const cartItems = useSelector(state => state.cart.cartItems)
   console.log(cartItems)
@@ -135,6 +141,11 @@ const Navbar = () => {
                             </li>
                           ))
                         }
+                        <li>
+                          <button className='logout-button' onClick={handleLogOut}>
+                            <FaSignOutAlt className="logout-icon" /> Logout
+                          </button>
+                        </li>
                       </ul>
                     </div>
                   )

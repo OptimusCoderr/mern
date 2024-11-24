@@ -120,41 +120,42 @@
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Optional: Add shadow for a more pronounced effect */
 }
 
-/* Dropdown.css */
-
+/* Dropdown Styles */
 .dropdown {
   position: absolute;
-  right: 0.5rem; /* Adjust this value to move the dropdown more to the right */
+  right: 0; /* Align to the right of the avatar */
   top: 100%; /* Position it below the avatar button */
-  transform: translateY(0.5rem); /* Adjust this value to create space below */
-  width: 12rem; /* Equivalent to w-48 */
-  background-color: white; /* Equivalent to bg-white */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-lg */
-  border-radius: 0.375rem; /* Equivalent to rounded-md */
-  z-index: 40; /* Equivalent to z-40 */
+  transform: translateY(0.5rem); /* Space below */
+  width: 12rem; /* Width of the dropdown */
+  background-color: white; /* Background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  border-radius: 0.375rem; /* Rounded corners */
+  z-index: 40; /* Ensure it appears above other elements */
+  overflow: hidden; /* Prevent overflow */
 }
 
+/* Dropdown List Styles */
 .dropdown ul {
-  padding: 0.5rem 0; /* Equivalent to py-2 */
+  padding: 0; /* Remove padding */
   list-style-type: none; /* Remove default list styling */
   margin: 0; /* Remove default margin */
 }
 
+/* Dropdown Item Styles */
 .dropdown li {
   margin: 0; /* Remove default margin */
 }
 
+/* Dropdown Link Styles */
 .dropdown a {
-  display: block; /* Equivalent to block */
-  padding: 0.5rem 1rem; /* Equivalent to px-4 py-2 */
-  font-size: 0.875rem; /* Equivalent to text-sm */
-  color: inherit; /* Inherit text color */
-  text-decoration: none; /* Remove underline from links */
+  display: block; /* Make links block elements */
+  padding: 0.5rem 1rem; /* Padding for links */
+  font-size: 0.875rem; /* Font size */
+  color: #333; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
-.dropdown a:hover {
-  background-color: #f7fafc; /* Equivalent to hover:bg-gray-100 */
-}
 
 /* Responsive Styles */
 @media (max-width: 1440px) { /* For tablets and smaller devices */
@@ -200,4 +201,39 @@
   .search-container {
     width: 100%; /* Make search bar full width */
   }
+
+
+}
+
+/* Hover Effect for Links */
+.dropdown a:hover {
+  background-color: #f7fafc; /* Light gray background on hover */
+}
+
+/* Logout Button Styles */
+.logout-button {
+  background-color: #E53E3E; /* Red background for logout */
+  color: white; /* White text color */
+  font-size: 0.875rem; /* Font size */
+  padding: 0.5rem 1rem; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 0.375rem; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+  width: 100%; /* Full width */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+/* Logout Button Hover Effect */
+.logout-button:hover {
+  background-color: #C53030; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Logout Icon Styles */
+.logout-icon {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1rem; /* Size of the icon */
 }

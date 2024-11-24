@@ -93,18 +93,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F7FAFC; /* Light grey */
+    background-color: #EBF8FF; /* Light blue */
     color: #1A202C; /* Dark text */
     font-weight: bold;
     padding: 8px 16px;
     border-radius: 4px;
-    border: 1px solid #E2E8F0; /* Light grey border */
+    border: 1px solid #BEE3F8; /* Light blue border */
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, box-shadow 0.2s; /* Added box-shadow transition */
 }
 
 .google-button:hover {
-    background-color: #E2E8F0; /* Darker grey on hover */
+    background-color: #BEE3F8; /* Darker light blue on hover */
+    box-shadow: 0 4px 8px rgba(66, 153, 225, 0.3); /* Light blue blur effect on hover */
 }
 
 .google-icon {
