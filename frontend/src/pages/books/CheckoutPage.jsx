@@ -4,15 +4,20 @@ import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
 import './CheckoutPage.css'; // Import the CSS file
+import { useAuth } from '../../context/AuthContext';
 
 const CheckoutPage = () => {
   const cartItems = useSelector(state => state.cart.cartItems);
   const totalPrice = cartItems.reduce((acc, item) => acc + item.newPrice, 0).toFixed(2);
-  const currentUser  = true; // TODO: GET USER FROM AUTH
+  const {currentUser}  = useAuth; // TODO: GET USER FROM AUTH
   const [isChecked, setIsChecked] = useState(false);
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = (data) => {
+
+    //CHECK IF USER IS LOGIN
+
+
     const newOrder = {
       name: data.name,
       email: currentUser?.email,
