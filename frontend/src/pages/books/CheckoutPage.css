@@ -1,45 +1,46 @@
 .checkout-page {
     min-height: 100vh;
-    padding: 2rem; /* Increased padding for better fit in landscape mode */
-    background-color: #f7fafc;
+    padding: 2rem;
+    background-color: #f0f4f8; /* Softer background color */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container {
-    max-width: 1200px; /* Increased max-width for better landscape view */
-    width: 100%; /* Ensure it takes full width */
+    max-width: 800px; /* Adjusted for a more compact layout */
+    width: 100%;
     margin: 0 auto;
-    padding: 1rem; /* Added padding for better spacing */
+    padding: 2rem; /* Increased padding for better spacing */
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .title {
-    font-weight: 600;
-    font-size: 2rem; /* Increased font size for better readability */
-    color: #4a5568;
-    margin-bottom: 0.25rem; /* Reduced margin for less gap */
-    text-align: center; /* Centered title */
+    font-weight: 700;
+    font-size: 2.5rem; /* Larger font size for emphasis */
+    color: #2d3748; /* Darker text color */
+    margin-bottom: 1rem; /* Increased margin for spacing */
+    text-align: center;
 }
 
 .total-price, .items-count {
-    color: #6b7280;
-    margin-bottom: 0.25rem; /* Reduced margin for less gap */
-    text-align: center; /* Centered text */
+    color: #4a5568;
+    font-size: 1.2rem; /* Slightly larger font size */
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .form-container {
-    background-color: #ffffff;
-    border-radius: 0.375rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    padding: 2rem; /* Increased padding for better spacing */
-    margin-top: 1rem; /* Added margin for separation */
+    padding: 2rem;
+    margin-top: 1rem;
 }
 
 .form {
     display: grid;
-    gap: 1rem; /* Adjusted gap for better spacing */
-    grid-template-columns: repeat(2, 1fr); /* Two-column layout for landscape */
+    gap: 1.5rem; /* Increased gap for better spacing */
+    grid-template-columns: 1fr; /* Single column layout for better readability */
 }
 
 .personal-details {
@@ -47,9 +48,9 @@
 }
 
 .details-title {
-    font-weight: 500;
-    font-size: 1.5rem; /* Increased font size for better readability */
-    margin-bottom: 0.5rem; /* Added margin for spacing */
+    font-weight: 600;
+    font-size: 1.8rem; /* Increased font size for better readability */
+    margin-bottom: 0.5rem;
 }
 
 .field {
@@ -58,29 +59,29 @@
 }
 
 .label {
-    margin-bottom: 0.25rem;
-    font-weight: 500; /* Added font weight for emphasis */
+    margin-bottom: 0.5rem;
+    font-weight: 600; /* Bold labels for emphasis */
+    color: #2d3748; /* Darker label color */
 }
 
 .input {
     height: 2.5rem;
-    border: 1px solid #d1d5db;
+    border: 1px solid #cbd5e0; /* Lighter border color */
     border-radius: 0.375rem;
     padding: 0 1rem;
-    background-color: #f9fafb;
-    transition: border-color 0.2s; /* Added transition for better interaction */
+    background-color: #f7fafc; /* Light background for inputs */
+    transition: border-color 0.2s;
 }
 
 .input:focus {
-    border-color: #4299e1; /* Highlight border on focus */
-    outline: none; /* Remove default outline */
+    border-color: #3182ce; /* Highlight border on focus */
+    outline: none;
 }
 
 .agreement {
     display: flex;
     align-items: center;
     margin-top: 1rem;
-    grid-column: span 2; /* Make agreement span both columns */
 }
 
 .checkbox {
@@ -97,19 +98,19 @@
 }
 
 .submit-button {
-    text-align: center; /* Centered submit button */
-    margin-top: 1rem; /* Added margin for spacing */
-    grid-column: span 2; /* Make submit button span both columns */
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .order-button {
     background-color: #4299e1;
     color: #ffffff;
     font-weight: bold;
-    padding: 0.75rem 1.5rem; /* Increased padding for better touch targets */
+    padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
     transition: background-color 0.2s;
-    width: 100%; /* Full width button */
+    width: 100%;
+    font-size: 1.1rem; /* Increased font size for better touch targets */
 }
 
 .order-button:disabled {

@@ -14,9 +14,15 @@ app.use(cors({
 }));
 
 
-//ROUTES
+//BOOK ROUTES
 const bookRoutes = require('./src/books/book.route.js');
-app.use('/api/books', bookRoutes)
+app.use('/api/books', bookRoutes);
+
+//ORDER ROUTES
+const orderRoutes = require('./src/orders/order.route.js');
+app.use('/api/orders', orderRoutes);
+
+
 
 
 
