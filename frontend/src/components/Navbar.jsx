@@ -162,21 +162,19 @@ const Navbar = () => {
             <CiHeart className="icon" />
           </button>
 
-          <Link to="/cart" className="cart-link">
-            <BsCart4 className="cart-icon text-primary" />
+         
 
-
-            {/* New container for count */}
-            <span className="cart-count-container"> 
-            {
-              cartItems.length > 0 ?
-              <span className="cart-count">{cartItems.length}</span> : <span className="cart-count">0</span> 
-            }
-            </span>
-
+          <Link to="/cart" className="bg-primary p-1 sm:px-6 px-2 flex items-center rounded-sm">
+                      <BsCart4 className='' />
+                      {
+                          cartItems.length > 0 ?  <span className="text-sm font-semibold sm:ml-1">{cartItems.length}</span> :  <span className="text-sm font-semibold sm:ml-1">0</span>
+                      }
+                      
+                      
+          </Link>
 
             
-          </Link>
+      
         </div>
       </nav>
     </header>
