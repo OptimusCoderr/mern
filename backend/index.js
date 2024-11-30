@@ -22,10 +22,14 @@ app.use('/api/books', bookRoutes);
 const orderRoutes = require('./src/orders/order.route.js');
 app.use('/api/orders', orderRoutes);
 
-// ADMIN DASHBOARD
 //ORDER ROUTES
 const userRoutes = require('./src/users/user.route.js');
 app.use('/api/auth', userRoutes);
+
+
+// ADMIN DASHBOARD
+const adminRoutes = require('./src/stats/admin.stats.js');
+app.use('/api/admin', adminRoutes);
 
 
 
